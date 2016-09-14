@@ -8,6 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>טלטול - שירותי איכות להורה</title>
     
+      <!-- Load JS
+    ================================================== -->
+      
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--      <script type="text/javascript" src="js/bootstrap-select.js"></script>-->
+      <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+      
+    <!-- Latest compiled and minified CSS -->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">-->
+
+    <!-- Latest compiled and minified JavaScript -->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>-->
+      
     <!-- Favicons
     ================================================== -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -18,11 +34,6 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    
-    <!-- Include the plugin's CSS and JS: -->
-    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
-    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
 
     <!-- Slider
     ================================================== -->
@@ -33,23 +44,16 @@
     ================================================== -->
     <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
-
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/i18n/defaults-*.min.js"></script>
-
-      
-      
+    
+    
+     
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -114,7 +118,9 @@
 
                     <form action="https://secure.powerlink.co.il/web/webtoaccount.aspx" method="post">
                         <input type=hidden id="returnpath" name="returnpath" value="http://127.0.0.1:50867/newcustomer.html">
-                        <input type=hidden id="uid" name="uid" value="48eb98d6-c0d9-4e6b-ab2b-c1805adb8b7f">
+<!--                        <input type=hidden id="uid" name="uid" value="48eb98d6-c0d9-4e6b-ab2b-c1805adb8b7f">-->
+                        
+                        <input type=hidden id="uid" name="uid" value="2d00f9f6-fc26-434a-b458-3150fe56215a">
                         
                         <div class="row">
                             <div class="col-md-6">
@@ -130,42 +136,14 @@
                                     <input type="tel" class="form-control" id="telephone1" name="telephone1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="telephone1" style="float:right">מספר נייד</label>
-                                    <select class="selectpicker">
-                                      <option>Mustard</option>
-                                      <option>Ketchup</option>
-                                      <option>Relissdfh</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="XXXXXXX" style="float:right">כתובת מגורים</label>
-                                    <!-- Build your select: -->
-                                    <select id="example-getting-started" multiple="multiple">
-                                        <option value="cheese">Cheese</option>
-                                        <option value="tomatoes">Tomatoes</option>
-                                        <option value="mozarella">Mozzarella</option>
-                                        <option value="mushrooms">Mushrooms</option>
-                                        <option value="pepperoni">Pepperoni</option>
-                                        <option value="onions">Onions</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="XXXXXXX" style="float:right">גילאי הילדים</label>
-                                    <input type="text" class="form-control" id="XXXXXXX" name="XXXXXXX" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="XXXXXXX" style="float:right">גילאי הילדים</label>
-                                    <select name='XXXXXXX' class="form-control" id='XXXXXXX'>
-                                    <option value=''></option>
-                                    <option value='1'>פרטי</option>
-                                    <option value='2'>ציבורי</option>
-                                    <option value='3'>מלכ"ר</option>
+                                    <label for="XXXXXX" style="float:right">עדיפות למטפלת מבוגרת/צעירה?</label>
+                                    <select class="selectpicker" name="XXXXXX" id="XXXXXX" multiple>
+                                      <option>צעירה</option>
+                                      <option>מבוגרת</option>
+                                      <option>לא משנה</option>
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            
                         </div>
                         
                         <button type="submit" value="send" class="btn tf-btn btn-default">שלח</button>
@@ -210,20 +188,6 @@
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/newCustomer.js"></script>
-      
-      <!-- Initialize the plugin: -->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#example-getting-started').multiselect();
-    });
-</script>
 
-      <!-- Initialize the plugin: -->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#example-getting-started').multiselect();
-    });
-</script>
-      
   </body>
 </html>
