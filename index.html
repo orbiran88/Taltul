@@ -30,7 +30,10 @@
 
     <!-- Stylesheet
     ================================================== -->
+    
     <link rel="stylesheet" type="text/css"  href="css/styleHome.css">
+    
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -48,9 +51,10 @@
     <![endif]-->
   </head>
   <body>
+      
     <!-- Navigation
     ==========================================-->
-    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top navbar-left">
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top navbar-right">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -60,18 +64,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">לוגו</a>
+          <a class="navbar-brand" href="index.html">
+              <img src="img/logosmall.png">
+            </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:right">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#tf-contact" class="page-scroll">צור קשר</a></li>
-              <li><a href="#tf-about" class="page-scroll">אודות</a></li>
-              <li><a href="#tf-works" class="page-scroll">ממליצים</a></li>
-              <li><a href="#tf-services" class="page-scroll">שירותים</a></li>
-              
-            <li><a href="#tf-home" class="page-scroll">דף הבית</a></li>
+              <li class="active"><a href="#" class="home">דף הבית</a></li>
+              <li><a href="#" class="page-scroll">שירותים</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">טפסים
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://google.com" class="page-scroll">טופס כרטיס הורה</a></li> 
+                </ul>
+              <li><a href="#" class="page-scroll">ממליצים</a></li>
+              <li><a href="#" class="page-scroll">אודות</a></li>
+              <li><a href="#" class="page-scroll">צור קשר</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

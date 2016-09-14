@@ -70,51 +70,7 @@ ul, ol{
 	webkit-padding: 0;
 	moz-padding: 0;
 }
-/* Navigation */
-#tf-menu {
-	padding: 20px;
-	transition: all 0.8s;
-}
-#tf-menu.navbar-default {
-	background-color: rgba(248, 248, 248, 0);
-	border-color: rgba(231, 231, 231, 0);
-}
-#tf-menu a.navbar-brand {
-text-transform: uppercase;
-font-size: 22px;
-color: #fff;
-font-weight: 900;
-}
 
-#tf-menu.navbar-default .navbar-nav > li > a {
-	text-transform: uppercase;
-	color: #FFF;
-	font-size: 12px;
-	letter-spacing: 1px;
-}
-.on {
-	background-color: rgba(134, 112, 78, 0.96) !important;
-	padding: 0 !important;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-	color: #fcaf45 !important;
-	background-color: transparent;
-	font-weight: 700;
-}
-
-.navbar-toggle {
-	border-radius: 0;
-	}
-.navbar-default .navbar-toggle:hover, 
-.navbar-default .navbar-toggle:focus {
-	background-color: #FCAC45;
-	border-color: #FCAC45;
-	}
-.navbar-default .navbar-toggle:hover>.icon-bar {
-	background-color: #FFF;
-	}
 /* Home Style */
 #tf-home{
 	background-color: antiquewhite;

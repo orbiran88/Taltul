@@ -27,16 +27,25 @@
 
     <!-- Stylesheet
     ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="css/styleNewCustomer.css">
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 
-
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/i18n/defaults-*.min.js"></script>
+
+      
+      
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,6 +54,7 @@
     <![endif]-->
   </head>
   <body>
+      
     <!-- Navigation
     ==========================================-->
     <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top navbar-right">
@@ -116,8 +126,12 @@
                                     <input type="tel" class="form-control" id="telephone1" name="telephone1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXXXX" style="float:right">כתובת דוא"ל</label>
-                                    <input type="email" class="form-control" id="XXXXXXX" name="XXXXXXX" placeholder="">
+                                    <label for="telephone1" style="float:right">מספר נייד</label>
+                                    <select class="selectpicker">
+                                      <option>Mustard</option>
+                                      <option>Ketchup</option>
+                                      <option>Relissdfh</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="XXXXXXX" style="float:right">כתובת מגורים</label>
@@ -176,6 +190,7 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script src="js/owl.carousel.js"></script>
 
@@ -183,6 +198,13 @@
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/newCustomer.js"></script>
+      
+      <!-- Initialize the plugin: -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+</script>
 
   </body>
 </html>
