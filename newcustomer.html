@@ -8,25 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>טלטול - שירותי איכות להורה</title>
     
-      <!-- Load JS
+    <!-- Load JS + jQuery
     ================================================== -->
-      
-<!--    <script type="text/javascript" src="js/jquery.min.js"></script>-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+      
+    <!-- Bootstrap
+    ================================================== -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!--      <script type="text/javascript" src="js/bootstrap-select.js"></script>-->
-      <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
       
-    <!-- Latest compiled and minified CSS -->
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">-->
+    <!-- Semantic-UI
+    ================================================== -->
+    <script type="text/javascript" src="js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.min.css">
+      
+    <!-- FastSelect
+    ================================================== -->
+    <link rel="stylesheet" href="dist/fastselect.min.css">
+      <script src="dist/fastselect.standalone.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>-->
-      
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
@@ -45,21 +50,17 @@
     <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-
+    
+    <!-- Fonts
+    ================================================== -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
-
-    
-    
-     
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+ 
+    <!-- Load Custom JS
+    ================================================== -->
+    <script src="js/semanticAddons.js"></script>
+      
   </head>
   <body>
       
@@ -143,6 +144,31 @@
                                       <option>לא משנה</option>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <div class="ui fluid multiple search selection dropdown selectpicker">
+                                      <input name="tags" type="hidden">
+                                      <i class="dropdown icon"></i>
+                                      <div class="default text">בחר או רשום</div>
+                                      <div class="menu">
+                                    <div class="item" data-value="angular">מטפלת</div>
+                                    <div class="item" data-value="css">בייביסיטר</div>
+                                    <div class="item" data-value="design">אופר</div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telephone1" style="float:right">מספר נייד</label>
+                                    <input
+                                        type="text"
+                                        multiple
+                                        class="tagsInput"
+                                        value="Algeria,Angola"
+                                        data-initial-value='[{"text": "Algeria", "value" : "Algeria"}, {"text": "Angola", "value" : "Angola"}]'
+                                        data-user-option-allowed="true"
+                                        data-url="demo/data.json"
+                                        data-load-once="true"
+                                        name="language"/>
+                                </div>
                             </div>
                         </div>
                         
@@ -178,17 +204,15 @@
 <!--    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>-->
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <script src="js/owl.carousel.js"></script>
 
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
-      <script type="text/javascript" src="js/newCustomer.js"></script>
+      
 
   </body>
 </html>
