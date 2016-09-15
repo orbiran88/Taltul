@@ -4,4 +4,7 @@ $(document).ready(function(){
           });
         });
 
-$('.tagsInput').fastselect();
+$(document).ready(function(){
+            $('.tagsInput').fastselect()
+          });
+        });

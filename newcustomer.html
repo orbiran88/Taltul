@@ -20,14 +20,16 @@
       
     <!-- Semantic-UI
     ================================================== -->
+<!--
     <script type="text/javascript" src="js/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/icon.min.css">
+-->
       
     <!-- FastSelect
     ================================================== -->
     <link rel="stylesheet" href="dist/fastselect.min.css">
-      <script src="dist/fastselect.standalone.js"></script>
+    <script src="dist/fastselect.standalone.js"></script>
 
     <!-- Favicons
     ================================================== -->
@@ -57,10 +59,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
  
-    <!-- Load Custom JS
-    ================================================== -->
-    <script src="js/semanticAddons.js"></script>
-      
+    
   </head>
   <body>
       
@@ -144,6 +143,7 @@
                                       <option>לא משנה</option>
                                     </select>
                                 </div>
+<!--
                                 <div class="form-group">
                                     <div class="ui fluid multiple search selection dropdown selectpicker">
                                       <input name="tags" type="hidden">
@@ -156,18 +156,22 @@
                                       </div>
                                     </div>
                                 </div>
+-->
                                 <div class="form-group">
                                     <label for="telephone1" style="float:right">מספר נייד</label>
                                     <input
                                         type="text"
-                                        multiple
-                                        class="tagsInput"
-                                        value="Algeria,Angola"
-                                        data-initial-value='[{"text": "Algeria", "value" : "Algeria"}, {"text": "Angola", "value" : "Angola"}]'
-                                        data-user-option-allowed="true"
-                                        data-url="demo/data.json"
-                                        data-load-once="true"
-                                        name="language"/>
+                multiple
+                class="tagsInput"
+                value="Algeria,Angola"
+                data-initial-value='[{&quot;text&quot;: &quot;Algeria&quot;, &quot;value&quot; : &quot;Algeria&quot;}, {&quot;text&quot;: &quot;Angola&quot;, &quot;value&quot; : &quot;Angola&quot;}]'
+                data-url="demo/data.json"
+                data-user-option-allowed="true"
+                data-load-once="true"
+                name="language"/>
+                                    <script>
+                                        $('.tagsInput').fastselect();
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +217,9 @@
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
       
-
+    <!-- Load Custom JS
+    ================================================== -->
+<!--    <script src="js/semanticAddons.js"></script>-->
+      
   </body>
 </html>
