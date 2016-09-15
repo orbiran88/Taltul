@@ -1283,7 +1283,7 @@
         onItemCreate: null,
         onMaxItemsReached: null,
 
-        placeholder: 'Choose option',
+        placeholder: 'בחר או רשום',
         searchPlaceholder: 'Search options',
         noResultsText: 'No results',
         userOptionPrefix: 'Add '

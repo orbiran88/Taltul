@@ -28,8 +28,8 @@
       
     <!-- FastSelect
     ================================================== -->
-    <link rel="stylesheet" href="dist/fastselect.min.css">
-    <script src="dist/fastselect.standalone.js"></script>
+    <link rel="stylesheet" href="css/fastselect.min.css">
+    <script src="js/fastselect.standalone.js"></script>
 
     <!-- Favicons
     ================================================== -->
@@ -161,14 +161,13 @@
                                     <label for="telephone1" style="float:right">מספר נייד</label>
                                     <input
                                         type="text"
-                multiple
-                class="tagsInput"
-                value="Algeria,Angola"
-                data-initial-value='[{&quot;text&quot;: &quot;Algeria&quot;, &quot;value&quot; : &quot;Algeria&quot;}, {&quot;text&quot;: &quot;Angola&quot;, &quot;value&quot; : &quot;Angola&quot;}]'
-                data-url="demo/data.json"
-                data-user-option-allowed="true"
-                data-load-once="true"
-                name="language"/>
+                                        multiple
+                                        class="tagsInput"
+                                        
+                                        data-url="data/data.json"
+                                        data-user-option-allowed="true"
+                                        data-load-once="true"
+                                        name="language"/>
                                     <script>
                                         $('.tagsInput').fastselect();
                                     </script>
