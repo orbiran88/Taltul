@@ -36,13 +36,16 @@
         transform: translate3d(0, 0, 0)
     }
 }
-.fstElement {
+.fstControls {
     display: block;
+    padding: 1px !important;
+    height: 32px;
+    line-height: 90px;
     width: 100%;
     font-size: 14px;
     text-align: right;
     line-height: 1.42857143;
-    /* color: rgb(188, 97, 127); */
+    color: rgb(188, 97, 127); 
     background-color: rgb(245, 241, 241);
     background-image: none;
     border: 1px solid #ccc;
@@ -88,6 +91,7 @@
     border: 0
 }
 .fstResults {
+/*
     position: absolute;
     left: -1px;
     top: 100%;
@@ -100,6 +104,27 @@
     border-top: 0;
     background-color: #FFF;
     display: none
+*/
+    position: absolute;
+    /* top: 100%; */
+    /* left: 0; */
+    z-index: 1000;
+    display: none;
+    float: right;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 12px;
+    text-align: right;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 .fstResultItem {
     font-size: 1.2em;
@@ -110,17 +135,17 @@
     border-top: 1px solid #fff;
 }
 .fstResultItem.fstUserOption {
-    color: #707070
+    color: rgb(188, 97, 127)
 }
 .fstResultItem.fstFocused {
     color: #fff;
-    background-color: #43A2F3;
-    border-color: #73baf6
+    background-color: #c16595;
+    border-color: #c16595;
 }
 .fstResultItem.fstSelected {
     color: #fff;
-    background-color: #2694f1;
-    border-color: #73baf6
+    background-color: #c16595;
+    border-color: #c16595
 }
 .fstGroupTitle {
     font-size: 1.4em;
@@ -178,19 +203,19 @@
 }
 .fstChoiceItem {
     display: inline-block;
-    font-size: 1.2em;
+    /* font-size: inherit; */
     position: relative;
     margin: 0 .41667em .41667em 0;
     padding: .33333em .33333em .33333em 1.5em;
-    float: left;
+    float: right;
     border-radius: .25em;
-    border: 1px solid #43A2F3;
+    /* border: 1px solid #c16595; */
     cursor: auto;
-    color: #fff;
-    background-color: #43A2F3;
+    color: #bc6586;
+    background-color: #f5f1f1;
     -webkit-animation: fstAnimationEnter 0.2s;
     -moz-animation: fstAnimationEnter 0.2s;
-    animation: fstAnimationEnter 0.2s
+    animation: fstAnimationEnter 0.2s;
 }
 .fstChoiceItem.mod1 {
     background-color: #F9F9F9;
@@ -202,7 +227,7 @@
 }
 .fstChoiceRemove {
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     border: 0;
     cursor: pointer;
     background: none;
@@ -214,7 +239,7 @@
     line-height: 1.28571em;
     margin-top: -.64286em;
     text-align: center;
-    color: #fff
+    color: #5a5a5a;
 }
 .fstChoiceRemove::-moz-focus-inner {
     padding: 0;
@@ -228,12 +253,11 @@
     cursor: text
 }
 .fstMultipleMode .fstQueryInput {
-    font-size: 1.4em;
-    float: left;
+    float: right;
     padding: .28571em 0;
     margin: 0 0 .35714em 0;
     width: 2em;
-    color: #999
+    color: #ba2c2c
 }
 .fstMultipleMode .fstQueryInputExpanded {
     float: none;

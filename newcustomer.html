@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl">
+<html lang="he" dir="rtl">
   <head>
     <!-- Basic Page Needs
     ================================================== -->
@@ -11,12 +11,18 @@
     <!-- Load JS + jQuery
     ================================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
       
     <!-- Bootstrap
     ================================================== -->
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    
       
     <!-- Semantic-UI
     ================================================== -->
@@ -52,6 +58,7 @@
     <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
     
     <!-- Fonts
     ================================================== -->
@@ -136,41 +143,53 @@
                                     <input type="tel" class="form-control" id="telephone1" name="telephone1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXXX" style="float:right">עדיפות למטפלת מבוגרת/צעירה?</label>
-                                    <select class="selectpicker" name="XXXXXX" id="XXXXXX" multiple>
-                                      <option>צעירה</option>
-                                      <option>מבוגרת</option>
-                                      <option>לא משנה</option>
-                                    </select>
-                                </div>
-<!--
-                                <div class="form-group">
-                                    <div class="ui fluid multiple search selection dropdown selectpicker">
-                                      <input name="tags" type="hidden">
-                                      <i class="dropdown icon"></i>
-                                      <div class="default text">בחר או רשום</div>
-                                      <div class="menu">
-                                    <div class="item" data-value="angular">מטפלת</div>
-                                    <div class="item" data-value="css">בייביסיטר</div>
-                                    <div class="item" data-value="design">אופר</div>
-                                      </div>
-                                    </div>
-                                </div>
--->
-                                <div class="form-group">
-                                    <label for="telephone1" style="float:right">מספר נייד</label>
-                                    <input
-                                        type="text"
+                                    <label for="XXXXX" style="float:right">עדיפות למטפלת מבוגרת/צעירה?</label>
+                                    <input type="text"
                                         multiple
                                         class="tagsInput"
-                                        
-                                        data-url="data/data.json"
+                                        data-url="data/pref.json"
                                         data-user-option-allowed="true"
                                         data-load-once="true"
-                                        name="language"/>
-                                    <script>
-                                        $('.tagsInput').fastselect();
+                                        name="XXXXX"
+                                        id="XXXXX"/>
+                                    <script> $('.tagsInput').fastselect();
                                     </script>
+                                </div>
+                                <div class="form-group">
+                                    <label for="XXXXX" style="float:right">אנו מחפשים</label>
+                                    <input type="text"
+                                        multiple
+                                        class="tagsInput"
+                                        data-url="data/searching.json"
+                                        data-user-option-allowed="true"
+                                        data-load-once="true"
+                                        name="XXXXX"
+                                        id="XXXXX"/>
+                                    <script> $('.tagsInput').fastselect();
+                                    </script>
+                                </div>
+                                <div class="form-group">
+                                    <label for="XXXXX" style="float:right">התחלת המשרה - במיידי/בתאריך</label>
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                        
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('#datetimepicker2').datetimepicker({
+                                                locale: 'he',
+                                                format: 'DD/MM/YYYY'
+                                            });
+                                        });
+                                    </script>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="XXXXX" style="float:right">היקף המשרה-ימים ושעות (טווח ארוך/קצר)</label>
+                                    <input type="tel" class="form-control" id="XXXXX" name="XXXXX" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -208,13 +227,15 @@
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
+    <!-- Javascripts
+    ================================================== -->
+<!--
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.js"></script>
     <script src="js/owl.carousel.js"></script>
-
-    <!-- Javascripts
-    ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
+-->
+    
       
     <!-- Load Custom JS
     ================================================== -->
