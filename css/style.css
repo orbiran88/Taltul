@@ -74,6 +74,18 @@ ul, ol{
 	moz-padding: 0;
 }
 
+/* Bootstrap overrides */
+
+@media (min-width: 992px) {
+.col-md-6 {
+    width: inherit;
+    }
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: rgba(255, 255, 255, 0);
+}
+
 /* Navigation */
 
 @media (max-width: 767px) {

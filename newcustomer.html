@@ -55,10 +55,10 @@
 
     <!-- Stylesheet
     ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
     
     <!-- Fonts
     ================================================== -->
@@ -190,8 +190,42 @@
                                     
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">היקף המשרה-ימים ושעות (טווח ארוך/קצר)</label>
-                                    <input type="tel" class="form-control" id="XXXXX" name="XXXXX" placeholder="">
+                                    <label for="XXXXX" style="float:right">היקף המשרה-ימים ושעות</label>
+                                    <input type="tel" class="form-control" id="XXXXX" name="XXXXX" placeholder="טווח ארוך/קצר והיקף המשרה">
+                                </div>
+                                <div class="form-group">
+                                    <label for="XXXXX" style="float:right">פירוט הפניה וצרכי ההורים</label>
+                                    <input type="text"
+                                        multiple
+                                        class="tagsInput"
+                                        data-url="data/parentNeeds.json"
+                                        data-user-option-allowed="true"
+                                        data-load-once="true"
+                                        name="XXXXX"
+                                        id="XXXXX"/>
+                                    <script> $('.tagsInput').fastselect();
+                                    </script>
+                                </div>
+                                <div class="form-group">
+                                    <label for="XXXXX" style="float:right">רישיון נהיגה ורכב</label>
+                                    <input type="text"
+                                        multiple
+                                        class="tagsInput"
+                                        data-url="data/drivelicence.json"
+                                        data-user-option-allowed="true"
+                                        data-load-once="true"
+                                        name="XXXXX"
+                                        id="XXXXX"/>
+                                    <script> $('.tagsInput').fastselect();
+                                    </script>
+                                </div>
+                                <div class="form-group">
+                                  <label for="XXXXX" style="float:right">דרישות מיוחדות, דברים נוספים שחשוב לנו לדעת</label>
+                                  <textarea class="form-control" rows="4" name="XXXXX" id="XXXXXX"></textarea>
+                                </div>
+                                <div class="form-group">
+                                  <label for="XXXXX" style="float:right">נשמח לדעת מהיכן שמעת עלינו?</label>
+                                  <textarea class="form-control" rows="2" name="XXXXX" id="XXXXXX"></textarea>
                                 </div>
                             </div>
                         </div>
