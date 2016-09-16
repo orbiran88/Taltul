@@ -4,7 +4,72 @@
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 <head>
+<!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>טלטול - שירותי איכות להורה</title>
+    
+    <!-- Load JS + jQuery
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+      
+    <!-- Bootstrap
+    ================================================== -->
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    
+      
+    <!-- Semantic-UI
+    ================================================== -->
+<!--
+    <script type="text/javascript" src="js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.min.css">
+-->
+      
+    <!-- FastSelect
+    ================================================== -->
+    <link rel="stylesheet" href="css/fastselect.min.css">
+    <script src="js/fastselect.standalone.js"></script>
 
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Slider
+    ================================================== -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    
+    <!-- Fonts
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+ 
+    s
 </head>
 <body>
 
@@ -34,10 +99,29 @@
 <div class="item" data-value="ux">User Experience</div>
   </div>
 </div>
+    
+    <div class="form-group" style="float:right">
+    <div class='input-group date' id='datetimepicker2' >
+        <input type='text' class="form-control" />
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+        </div>  
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker({
+                locale: 'he',
+                format: 'DD/MM/YYYY'
+            });
+        });
+    </script>
+
+</div>
 
 
+s
 
-
+<!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 
@@ -54,5 +138,6 @@ $(document).ready(function(){
   });
 });
     </script>
+-->
 </body>
 </html>
