@@ -62,8 +62,8 @@
     
     <!-- Fonts
     ================================================== -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
  
     
@@ -125,56 +125,67 @@
 
                     <form action="https://secure.powerlink.co.il/web/webtoaccount.aspx" method="post">
                         <input type=hidden id="returnpath" name="returnpath" value="http://127.0.0.1:50867/newcustomer.html">
-<!--                        <input type=hidden id="uid" name="uid" value="48eb98d6-c0d9-4e6b-ab2b-c1805adb8b7f">-->
                         
-                        <input type=hidden id="uid" name="uid" value="2d00f9f6-fc26-434a-b458-3150fe56215a">
-                        
+                        <input type=hidden id="uid" name="uid" value="48eb98d6-c0d9-4e6b-ab2b-c1805adb8b7f">
+<!--                        <input type=hidden id="uid" name="uid" value="2d00f9f6-fc26-434a-b458-3150fe56215a">-->
                         <div class="row">
                             <div class="col-md-6">
                                 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="accountname" style="float:right"> שם מלא</label>
-                                    <input type="text" ; class="form-control" id="accountname" name="accountname" placeholder="">
+                                    <label for="accountname" style="float:right">שם מלא</label>
+                                    <input type="text" required class="form-control" id="accountname" name="accountname" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for="telephone1" style="float:right">מספר נייד</label>
-                                    <input type="tel" class="form-control" id="telephone1" name="telephone1" placeholder="">
+                                    <input type="tel" required class="form-control" id="telephone1" name="telephone1" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">עדיפות למטפלת מבוגרת/צעירה?</label>
+                                    <label for="emailaddress1" style="float:right">כתובת דואר אלקטרוני</label>
+                                    <input type="email" class="form-control" id="emailaddress1" name="emailaddress1" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="billingstreet" style="float:right">כתובת מגורים</label>
+                                    <input type="text" ; class="form-control" id="billingstreet" name="billingstreet" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="childrensAge" style="float:right">גילאי הילדים</label>
+                                    <input type="text" ; class="form-control" id="childrensAge" name="childrensAge" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="prefNanny" style="float:right">עדיפות למטפלת מבוגרת/צעירה?</label>
                                     <input type="text"
                                         multiple
                                         class="tagsInput"
                                         data-url="data/pref.json"
                                         data-user-option-allowed="true"
                                         data-load-once="true"
-                                        name="XXXXX"
-                                        id="XXXXX"/>
+                                        name="prefNanny"
+                                        id="prefNanny"/>
                                     <script> $('.tagsInput').fastselect();
                                     </script>
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">אנו מחפשים</label>
+                                    <label for="searchingFor" style="float:right">אנו מחפשים</label>
                                     <input type="text"
                                         multiple
                                         class="tagsInput"
                                         data-url="data/searching.json"
                                         data-user-option-allowed="true"
                                         data-load-once="true"
-                                        name="XXXXX"
-                                        id="XXXXX"/>
+                                        name="searchingFor"
+                                        id="searchingFor"/>
                                     <script> $('.tagsInput').fastselect();
                                     </script>
                                 </div>
                                 <div>
-                                    <label for="XXXXX" style="float:right">תאריך התחלת משרה</label>
+                                    <label for="prefStartDate" style="float:right">תאריך התחלת משרה</label>
                                     <br>
                                 </div>
                                 <div class="form-group" style="float:right; direction: ltr">
                                     <div class='input-group date' id='datetimepicker2' >
-                                        <input type='text' class="form-control" />
+                                        <input type='text' class="form-control" id="prefStartDate" name="prefStartDate"/>
                                         <div class="input-group-addon">
                                             <span class="glyphicon glyphicon-calendar"></span>
                                         </div>  
@@ -190,42 +201,43 @@
                                     
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">היקף המשרה-ימים ושעות</label>
-                                    <input type="tel" class="form-control" id="XXXXX" name="XXXXX" placeholder="טווח ארוך/קצר והיקף המשרה">
+                                    <label for="jobScope" style="float:right">היקף המשרה-ימים ושעות</label>
+                                    <input type="tel" class="form-control" id="jobScope" name="jobScope" placeholder="טווח ארוך/קצר והיקף המשרה">
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">פירוט הפניה וצרכי ההורים</label>
+                                    <label for="parentNeeds" style="float:right">פירוט הפניה וצרכי ההורים</label>
                                     <input type="text"
                                         multiple
+                                        required
                                         class="tagsInput"
                                         data-url="data/parentNeeds.json"
                                         data-user-option-allowed="true"
                                         data-load-once="true"
-                                        name="XXXXX"
-                                        id="XXXXX"/>
+                                        name="parentNeeds"
+                                        id="parentNeeds"/>
                                     <script> $('.tagsInput').fastselect();
                                     </script>
                                 </div>
                                 <div class="form-group">
-                                    <label for="XXXXX" style="float:right">רישיון נהיגה ורכב</label>
+                                    <label for="driveLicence" style="float:right">רישיון נהיגה ורכב</label>
                                     <input type="text"
                                         multiple
                                         class="tagsInput"
                                         data-url="data/drivelicence.json"
                                         data-user-option-allowed="true"
                                         data-load-once="true"
-                                        name="XXXXX"
-                                        id="XXXXX"/>
+                                        name="driveLicence"
+                                        id="driveLicence"/>
                                     <script> $('.tagsInput').fastselect();
                                     </script>
                                 </div>
                                 <div class="form-group">
-                                  <label for="XXXXX" style="float:right">דרישות מיוחדות, דברים נוספים שחשוב לנו לדעת</label>
-                                  <textarea class="form-control" rows="4" name="XXXXX" id="XXXXXX"></textarea>
+                                  <label for="specialNeeds" style="float:right">דרישות מיוחדות, דברים נוספים שחשוב לנו לדעת</label>
+                                  <textarea class="form-control" rows="4" name="specialNeeds" id="specialNeeds"></textarea>
                                 </div>
                                 <div class="form-group">
-                                  <label for="XXXXX" style="float:right">נשמח לדעת מהיכן שמעת עלינו?</label>
-                                  <textarea class="form-control" rows="2" name="XXXXX" id="XXXXXX"></textarea>
+                                  <label for="refSource" style="float:right">נשמח לדעת מהיכן שמעת עלינו?</label>
+                                  <textarea class="form-control" rows="2" name="refSource" id="refSource"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +263,7 @@
                 </ul>
             </div>
             <div class="pull-right fnav">
-                <p>עוצב ע"י  <a href="https://www.facebook.com/orbiran#">אור בירן</a></p>
+                <p>עוצב ונבנה ע"י  <a href="https://www.facebook.com/orbiran#">אור בירן</a></p>
             </div>
         </div>
     </nav>
