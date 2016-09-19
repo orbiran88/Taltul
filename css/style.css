@@ -187,11 +187,10 @@ font-weight: 900;
     }
 
     .color{
-	   font-size: 50px;
+	   font-size: 40px;
     }
 }
 
-/* Show the dropdown menu on hover */
 @media (min-width: 767px) {
     #tf-home p.lead{
 	   font-size: 25px;
@@ -231,7 +230,8 @@ font-weight: 900;
 .color{
 	color: #d9a4b6;
     font-family: 'Alef', sans-serif;
-    text-shadow: #774858 2px 2px 1px;
+    letter-spacing: 8px;
+    text-shadow: rgba(119, 72, 88, 0.42) 2px 2px 1px;
 }
 
 a.fa.fa-angle-down {
