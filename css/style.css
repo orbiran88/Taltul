@@ -89,6 +89,11 @@ ul, ol{
     border-color: rgba(255, 255, 255, 0);
 }
 
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus
+{
+        background-color: rgba(51, 122, 183, 0);
+}
+
 /* Navigation */
 
 @media (max-width: 767px) {
@@ -182,6 +187,12 @@ font-weight: 900;
 /* Home Style */
 
 @media (max-width: 767px) {
+    #tf-home{
+    background-image: url(../img/home-mobile.jpg);
+    background-attachment: scroll;
+    height: 600px;
+    }
+    
     #tf-home p.lead{
 	   font-size: 25px;
     }
@@ -201,6 +212,12 @@ font-weight: 900;
 }
 
 @media (min-width: 767px) {
+    #tf-home{
+    background-image: url(../img/home.jpg);
+    height: 1000px;
+    background-attachment: fixed;
+    }
+    
     #tf-home p.lead{
 	   font-size: 25px;
     }
@@ -218,17 +235,12 @@ font-weight: 900;
 }
 
 #tf-home .overlay{
-    
-	height: 750px;
 	background-attachment: fixed;
 }
 
 #tf-home{
-    background-image: url(../img/home.jpg) ;
-	background-color: antiquewhite;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #cfcfcf;
 }
@@ -268,6 +280,7 @@ a.fa.fa-angle-down:hover{
 }
 /* About Section */
 #tf-about{
+    background-color: rgba(231, 231, 231, 0.32);
 	padding: 80px 0;
 }
 ul.about-list{ margin: 30px 0 0 ;}
@@ -378,28 +391,53 @@ img.img-circle.team-img {
 }
 
 /* Services Section */
+
+@media (max-width: 767px) {
+    #tf-services{
+    background: url(../img/services.jpg);
+    background-attachment: scroll;
+    }
+}
+
+@media (min-width: 767px) {
+    #tf-services{
+    background-image: url(../img/services-mobile.jpg);
+    background-attachment: fixed;
+    }
+}
+
 #tf-services{
+    
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	padding: 80px 0;
+    
+    @media (max-width: @iphone-screen) {
+        background-attachment: scroll;
+    }
 }
 
 .space{
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 #tf-services i.fa {
-	font-size: 40px;
-	border: 4px solid rgb(188, 97, 127);
-	width: 90px;
-	height: 90px;
-	padding: 23px 21px;
-	margin-bottom: 10px;
-	border-radius: 30%;
+    background: rgb(188, 97, 127);
+	color: #ffffff;
+	font-size: 30px;
+	border: 3px solid rgba(188, 97, 127, 0.68);
+	width: 70px;
+	height: 70px;
+	padding: 18px 16px;
+    margin-top: 15px;
+	margin-bottom: 1px;
+	border-radius: 40%;
 	transition: all 0.5s;
 }
 
-#tf-services i.fa.fa-mobile{
-	font-size: 50px;
-	padding: 20px 25px;
+#tf-services h4 {
+    font-size: 15px;
 }
 
 #tf-services .service:hover>i.fa{
@@ -581,14 +619,33 @@ ol.type li a.active { font-weight: 700; }
 	color: #d1d1d1;
 }
 
+/* Contect Form Section */
+#tf-contact {
+	padding: 80px 0;
+    
+}
+
+.valign-middle {
+    display: table;
+
+    > .columns {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    > .columns, > [class*="column"] + [class*="column"]:last-child {
+        float: none;
+    }
+}
+
 /* Parent Form Section */
 #tf-parentform {
-	padding: 80px 0;
+	padding: 20px 0;
 }
 
 #tf-parentform .section-title > h2 {
    font-size: 25px; 
-line-height: normal;
+    line-height: normal;
 }
 
 select{
@@ -669,6 +726,44 @@ button.btn.tf-btn.btn-default:hover {
 	outline: none;
 	outline-offset: none;
 }
+
+
+/* Candidate Form Section */
+#tf-candidate {
+	padding: 80px 0;
+}
+
+#tf-candidate .section-title > h2 {
+   font-size: 25px; 
+    line-height: normal;
+}
+
+#tf-candidate .form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+    text-align: right;
+	line-height: 1.42857143;
+	color: rgb(188, 97, 127);
+	background-color: rgb(245, 241, 241);
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+#tf-candidate .form-control:focus {
+	border-color: inherit;
+	outline: 0;
+	-webkit-box-shadow: transparent;
+	box-shadow: transparent;
+}
+
 /* Footer */
 nav#footer{
 	background: #f5f5f5;
