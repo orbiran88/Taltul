@@ -113,7 +113,7 @@
                         <small><em></em></small>            
                     </div>
 
-                    <form>
+                    <form onsubmit="$(this).MessageBox('msg');">
                         <div class="row">
                             <div class="col-md-6">
                                 
@@ -333,43 +333,57 @@
                             </div>
                         </div>
                         
-                        <button type="submit" value="send" class="btn tf-btn btn-default" onclick="$(this).MessageBox('msg');">שלח</button>
+                        <button type="submit" value="send" class="btn tf-btn btn-default">שלח</button>
                     </form>
                     <script>
                         (function($) {
                          $.fn.MessageBox = function(msg) {
                            return this.each(function(){
-                             var data = JSON.stringify({
-                              "name": $("#name").val(),
-                              "homeAddress": $("#homeAddress").val(),
-                              "email": $("#email").val(),
-                              "mobileNumber": $("#mobileNumber").val(),
-                              "dateOfBirt": $("#dateOfBirt").val(),
-                              "workArea": $("#workArea").val(),
-                              "Availabilityscalejob1": $("#Availabilityscalejob1").val(),
-                              "Preferably1": $("#Preferably1").val(),
-                              "Yearsofexperience": $("#Yearsofexperience").val(),
-                              "education": $("#education").val(),
-                              "Training": $("#Training").val(),
-                              "rate": $("#rate").val(),
-                              "smoking1": $("#smoking1").val(),
-                              "Driverslicense1": $("#Driverslicense1").val(),
-                              "shortnotice1": $("#shortnotice1").val(),
-                              "Lighthousework1": $("#Lighthousework1").val(),
-                              "extraservices1": $("#extraservices1").val(),
-                              "Comfortablewithanimals1": $("#Comfortablewithanimals1").val(),
-                              "Babysitter1": $("#Babysitter1").val(),
-                              "experienceabroad1": $("#experienceabroad1").val(),
-                              "ValidIsraelipassport1": $("#ValidIsraelipassport1").val(),
-                              "Notesandmorethingstosay1": $("#Notesandmorethingstosay1").val(),
-                              "Recommend1": $("#Recommend1").val()
+                           
+                               var http = new XMLHttpRequest();
+                                var url = "https://secure.powerlink.co.il/api/record/customobject1000?tokenid=a770d92b-8533-4102-b047-d731d7e8159b";
+                                var params = JSON.stringify({
+                                                              "name": $("#name").val(),
+                                                              "homeAddress": $("#homeAddress").val(),
+                                                              "email": $("#email").val(),
+                                                              "mobileNumber": $("#mobileNumber").val(),
+                                                              "dateOfBirt": $("#dateOfBirt").val(),
+                                                              "workArea": $("#workArea").val(),
+                                                              "Availabilityscalejob1": $("#Availabilityscalejob1").val(),
+                                                              "Preferably1": $("#Preferably1").val(),
+                                                              "Yearsofexperience": $("#Yearsofexperience").val(),
+                                                              "education": $("#education").val(),
+                                                              "Training": $("#Training").val(),
+                                                              "rate": $("#rate").val(),
+                                                              "smoking1": $("#smoking1").val(),
+                                                              "Driverslicense1": $("#Driverslicense1").val(),
+                                                              "shortnotice1": $("#shortnotice1").val(),
+                                                              "Lighthousework1": $("#Lighthousework1").val(),
+                                                              "extraservices1": $("#extraservices1").val(),
+                                                              "Comfortablewithanimals1": $("#Comfortablewithanimals1").val(),
+                                                              "Languages": $("#Languages").val(),
+                                                              "Babysitter1": $("#Babysitter1").val(),
+                                                              "experienceabroad1": $("#experienceabroad1").val(),
+                                                              "ValidIsraelipassport1": $("#ValidIsraelipassport1").val(),
+                                                              "Notesandmorethingstosay1": $("#Notesandmorethingstosay1").val(),
+                                                              "Recommend1": $("#Recommend1").val()
                             });
 
-                            var xhr = new XMLHttpRequest();
+                                http.open("POST", url, true);
 
-                            xhr.open("POST", "https://secure.powerlink.co.il/api/record/customobject1000?tokenid=a770d92b-8533-4102-b047-d731d7e8159b");
-
-                            xhr.send(data);
+                               function sleep(milliseconds) {
+                                  var start = new Date().getTime();
+                                  for (var i = 0; i < 1e7; i++) {
+                                    if ((new Date().getTime() - start) > milliseconds){
+                                      break;
+                                    }
+                                  }
+                                }
+                               
+                            http.send(params);
+                               
+                            sleep(1000);
+                               
                            })
                          };
                         })(jQuery);
