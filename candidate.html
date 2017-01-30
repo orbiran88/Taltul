@@ -82,7 +82,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html" class="home">דף הבית</a></li>
+              <li><a href="index.html" class="home">דף הבית</a></li>
               <li><a href="index.html#tf-services" class="page-scroll">שירותים</a></li>
                <li><a href="index.html#tf-about" class="page-scroll">אודות</a></li>
               <li class="dropdown">
@@ -113,7 +113,7 @@
                         <small><em></em></small>            
                     </div>
 
-                    <form onsubmit="$(this).MessageBox('msg');">
+                    <form onsubmit="$(this).MessageBox('msg');" action="success.html">
                         <div class="row">
                             <div class="col-md-6">
                                 
@@ -333,7 +333,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" value="send" class="btn tf-btn btn-default">שלח</button>
+                        <button type="submit" name="redirect" value="success.html" class="btn tf-btn btn-default">שלח</button>
                     </form>
                     <script>
                         (function($) {
@@ -383,7 +383,7 @@
                             http.send(params);
                                
                             sleep(1000);
-                               
+
                            })
                          };
                         })(jQuery);
